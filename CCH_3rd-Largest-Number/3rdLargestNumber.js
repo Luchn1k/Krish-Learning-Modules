@@ -1,20 +1,20 @@
 const readline = require('readline').createInterface({
-  input: process.stdin,
-  output: process.stdout
+    input: process.stdin,
+    output: process.stdout
 })
 readline.question("Enter Your Sequence Divided By A Space >>> ",function(sequece){
-	let regex_expression = /^[0-9\s]*$/;
-	if(regex_expression.test(sequece)){
-	 let splitSequence = sequece.split(" ");
-	 if(splitSequence.length >= 3){
-        console.log("Thrid Largest Number Is : "+thridLargestNumber(splitSequence));
-     }else{
-	     console.log("Not enough numbers to find 3rd largest number");
-     }
+    let regex_expression = /^[0-9\s]*$/;
+    if(regex_expression.test(sequece)){
+        let splitSequence = sequece.split(" ");
+        if(splitSequence.length >= 3){
+            console.log("Thrid Largest Number Is : "+thridLargestNumber(splitSequence));
+        }else{
+            console.log("Not enough numbers to find 3rd largest number");
+        }
     }else{
-	    console.log("Invalid input.Only Numbers and spaces is allowed");
+        console.log("Invalid input.Only Numbers and spaces is allowed");
     }
-	readline.close();
+    readline.close();
 })
 
 function thridLargestNumber(arr){
