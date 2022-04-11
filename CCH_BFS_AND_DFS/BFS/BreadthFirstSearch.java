@@ -1,6 +1,6 @@
 
-import Submitting.Graph.Graph;
-import Submitting.Graph.Node;
+import Graph.Graph;
+import Graph.Node;
 
 import java.util.LinkedList;
 import java.util.Queue;
