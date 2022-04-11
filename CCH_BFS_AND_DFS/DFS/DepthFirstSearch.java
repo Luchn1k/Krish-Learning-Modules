@@ -1,4 +1,4 @@
-package Submitting;
+
 
 import Submitting.Graph.Graph;
 import Submitting.Graph.Node;
