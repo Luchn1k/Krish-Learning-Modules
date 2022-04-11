@@ -1,4 +1,4 @@
-package Submitting.Graph;
+
 
 public class Node {
     private String value;
