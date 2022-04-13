@@ -1,0 +1,23 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+spring:
+  datasource:
+#    use a not existing database
+   # url: jdbc:mysql://localhost:3309/spring_practical_auto?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3309/spring_practical
+    username: root
+    password: 12345
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+ # jpa:
+  #  hibernate:
+      #    This is to change the naming strategy when jpa convert the query
+      #     for example firstName is converted to first_name due to camel naming convention
+#      naming:
+#        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      #createing mode .. ex create can create the table every time create-drop create and drop the the table when stop the service etc..
+     # ddl-auto: create
