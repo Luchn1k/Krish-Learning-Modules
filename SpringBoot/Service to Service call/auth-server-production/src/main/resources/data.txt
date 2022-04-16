@@ -1,0 +1,34 @@
+INSERT INTO oauth_client_details (client_id, client_secret, web_server_redirect_uri, scope, access_token_validity, refresh_token_validity, resource_ids, authorized_grant_types, additional_information) VALUES ('mobile', '{bcrypt}$2a$10$gPhlXZfms0EpNHX0.HHptOhoFD1AoxSr/yUIdTqA8vtjeP4zi0DDu', 'http://localhost:8080/login', 'READ,WRITE', '3600', '10000', 'inventory,payment', 'authorization_code,password,refresh_token,implicit', '{}');
+
+ INSERT INTO PERMISSION (NAME) VALUES
+ ('create_profile'),
+ ('read_profile'),
+ ('update_profile'),
+ ('delete_profile');
+
+ INSERT INTO role (NAME) VALUES
+		('ROLE_admin'),('ROLE_editor'),('ROLE_operator');
+
+ INSERT INTO PERMISSION_ROLE (PERMISSION_ID, ROLE_ID) VALUES
+     (1,1), /*create-> admin */
+     (2,1), /* read admin */
+     (3,1), /* update admin */
+     (4,1), /* delete admin */
+     (2,2),  /* read Editor */
+     (3,2),  /* update Editor */
+     (2,3);  /* read operator */
+
+
+insert into user (id, username,password, email, enabled, accountNonExpired, credentialsNonExpired, accountNonLocked) VALUES ('1', 'kalana','{bcrypt}$2a$12$pvtaeHo9w9a.YOsWiX/Kt.LAx1fMondbapetaObiHVMB19srurPHq', 'k@krishantha.com', '1', '1', '1', '1');
+ insert into  user (id, username,password, email, enabled, accountNonExpired, credentialsNonExpired, accountNonLocked) VALUES ('2', 'pasindu', '{bcrypt}$2a$12$2LQHuuX3QxfUnrF0Vmz3K.4kcqxoICp8liFYpDS9Yo8mzpyP4PTDW','k@krishantha.com', '1', '1', '1', '1');
+ insert into  user (id, username,password, email, enabled, accountNonExpired, credentialsNonExpired, accountNonLocked) VALUES ('3', 'maduranga', '{bcrypt}$2a$12$omtZJzmR2iHn0.0YgcblPumIBYK.TOPH0Zz1WbI.8K0DiU3.ETUzC','k@krishantha.com', '1', '1', '1', '1');
+ /*
+use user name as password
+ */
+
+
+INSERT INTO ROLE_USER (ROLE_ID, USER_ID)
+    VALUES
+    (1, 1) /* kalana is an admin */,
+    (2, 2) /* pasindu is an editor */ ,
+    (3, 3) /* maduranga is an operatorr */ ;
