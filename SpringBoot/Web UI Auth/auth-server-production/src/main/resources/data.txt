@@ -19,19 +19,16 @@ INSERT INTO oauth_client_details (client_id, client_secret, web_server_redirect_
      (2,3);  /* read operator */
 
 
-insert into user (id, username,password, email, enabled, accountNonExpired, credentialsNonExpired, accountNonLocked) VALUES ('1', 'krish','{bcrypt}$2a$10$ODGwrk2ufy5d7T6afmACwOA/6j6rvXiP5amAMt1YjOQSdEw44QdqG', 'k@krishantha.com', '1', '1', '1', '1');
- insert into  user (id, username,password, email, enabled, accountNonExpired, credentialsNonExpired, accountNonLocked) VALUES ('2', 'suranga', '{bcrypt}$2a$10$wQ8vZl3Zm3.zDSIcZEYym.bGq3fPMJXH9k.Vhudcfr6O6KQwDPSt6','k@krishantha.com', '1', '1', '1', '1');
- insert into  user (id, username,password, email, enabled, accountNonExpired, credentialsNonExpired, accountNonLocked) VALUES ('3', 'nuwan', '{bcrypt}$2a$10$wQ8vZl3Zm3.zDSIcZEYym.bGq3fPMJXH9k.Vhudcfr6O6KQwDPSt6','k@krishantha.com', '1', '1', '1', '1');
+insert into user (id, username,password, email, enabled, accountNonExpired, credentialsNonExpired, accountNonLocked) VALUES ('1', 'kalana','{bcrypt}$2a$12$pvtaeHo9w9a.YOsWiX/Kt.LAx1fMondbapetaObiHVMB19srurPHq', 'kalana@gmail.com', '1', '1', '1', '1');
+ insert into  user (id, username,password, email, enabled, accountNonExpired, credentialsNonExpired, accountNonLocked) VALUES ('2', 'pasindu', '{bcrypt}$2a$12$2LQHuuX3QxfUnrF0Vmz3K.4kcqxoICp8liFYpDS9Yo8mzpyP4PTDW','pasindu@gmail.com', '1', '1', '1', '1');
+ insert into  user (id, username,password, email, enabled, accountNonExpired, credentialsNonExpired, accountNonLocked) VALUES ('3', 'maduranga', '{bcrypt}$2a$12$omtZJzmR2iHn0.0YgcblPumIBYK.TOPH0Zz1WbI.8K0DiU3.ETUzC','maduranga@gmail.com', '1', '1', '1', '1');
  /*
- passowrds:
- krish - kpass
- suranga - spass
- nuwan - spass
+use user name as password
  */
 
 
 INSERT INTO ROLE_USER (ROLE_ID, USER_ID)
     VALUES
-    (1, 1) /* krish-admin */,
-    (2, 2) /* suranga-editor */ ,
-    (3, 3) /* nuwan-operatorr */ ;
+    (1, 1) /* kalana is an admin */,
+    (2, 2) /* pasindu is an editor */ ,
+    (3, 3) /* maduranga is an operatorr */ ;
