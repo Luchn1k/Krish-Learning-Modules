@@ -1,0 +1,1 @@
+Use discovery-service and all the projets in Service chain except rent-service to test
